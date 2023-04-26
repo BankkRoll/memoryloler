@@ -32,17 +32,26 @@ const IndexPage = () => {
   };
 
   const formatAccount = (account: Account) => (
-    <div key={account.id} className="mb-4">
-      {account.screen_names.map((screenName) => (
-        <p key={screenName.name}>
-        <h2 className="text-2xl font-bold mb-2">Username: @{screenName.name}</h2>
-        <h3 className="text-lg font-semibold">ID: {account.id}</h3>
-
-          {screenName.name} (from {screenName.start_date} to {screenName.end_date || 'present'})
-        </p>
-      ))}
+    <div key={account.id} className="mb-8 p-4 border border-gray-400 rounded">
+      <h2 className="text-2xl font-bold mb-4">Current username: @{account.screen_names[0].name}</h2>
+      <h3 className="text-lg font-semibold">Twitter ID: {account.id}</h3>
+      {account.screen_names.length > 0 && (
+        <ul>
+          {account.screen_names.map((screenName, index) => (
+            <li key={index}>
+              <p className="text-xl"><strong>Username:</strong> @{screenName.name}</p>
+              <p><strong>Observed first on:</strong> {screenName.start_date}</p>
+              {screenName.end_date && (
+                <p><strong>Observed last on:</strong> {screenName.end_date}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
+  
+  
 
   const formatResult = () => {
     if (!result) {
@@ -120,11 +129,17 @@ const IndexPage = () => {
             <p className="text-md mb-4">
               *Some usernames may show close if no exact match
             </p>
+            <p className="text-md mb-4">
+              *These date ranges will not generally represent the entire
+              time that the screen name has been used (they just indicate
+              when the account appears with that screen name in our data sets).
+            </p>
+            
             {formatResult()}
           </div>
         )}
       </div>
-      <div className="max-w-3xl mx-auto mt-4 px-4 py-8 bg-white rounded-lg shadow-lg">
+      <div className="max-w-4xl mx-auto mt-4 px-4 py-8 bg-white rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Overview</h2>
         <p className="text-gray-600 text-lg mb-4">Memory.lol is a web service that provides historical information about social media accounts. It currently has data for over 440 million Twitter accounts, with coverage going back to 2011 in most cases. The service is not open source, but its source code is available for use and modification by individuals, non-profit organizations, and worker-owned businesses.</p>
         <p className="text-gray-600 text-lg mb-4">Our application leverages Memory.lol as an API to search for historical screen names of Twitter accounts based on user input. The user simply enters a comma-separated list of usernames, and our app sends a request to Memory.lol to retrieve the corresponding historical screen names. We then display the results to the user.</p>
