@@ -1,5 +1,6 @@
 # Twitter Username Search App
 A web app built with React that allows users to search for the historical screen names of Twitter accounts using Memory.lol API.
+![screencapture-memoryloler-vercel-app-2023-04-26-01_43_54](https://user-images.githubusercontent.com/106103625/234480512-21a25f9e-558c-460b-b6ab-3632f3518309.png)
 
 ## Features
 - Users can input a comma-separated list of usernames to search for
