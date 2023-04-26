@@ -1,5 +1,5 @@
 # Twitter Username Search App
-A web app built with React that allows users to search for the historical screen names of Twitter accounts using Memory.lol API.
+A web app built with React that allows users to search for the historical screen names of Twitter accounts using Memory.lol, creating our own API.
 ![screencapture-localhost-3000-2023-04-26-02_02_09](https://user-images.githubusercontent.com/106103625/234483381-98d6b3c1-c71d-4ff6-a0a2-3f8b7bb43a54.png)
 
 ## Features
