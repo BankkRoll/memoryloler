@@ -14,7 +14,7 @@ To use the app, simply enter a comma-separated list of Twitter usernames into th
 ## Installation
 To install and run the app locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/memoryloler.git`
+1. Clone the repository: `git clone https://github.com/BankkRoll/memoryloler.git`
 2. Change into the project directory: `cd memoryloler`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
