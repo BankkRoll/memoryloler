@@ -2,7 +2,7 @@
 
 A modern, production-grade web application for searching historical Twitter username data using the Memory.lol API. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
-![MemoryLoler](https://github.com/BankkRoll/memoryloler/assets/ba0c6961-8dd1-4ea4-8c09-b697beca6ce3)
+![MemoryLoler](https://github.com/user-attachments/assets/d8089104-d163-4fc7-b731-3100e15b6fc7)
 
 ## Features
 
